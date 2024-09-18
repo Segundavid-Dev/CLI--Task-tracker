@@ -1,36 +1,12 @@
-# fruits = ["Banana", "Orange"]
+user_info = {
+    0: "David",
+    1: "Do it without emotions"
+}
 
+more_user_info = {
+    0 : "Esther"
+}
 
-# #using the enumerate
+user_info.update(more_user_info)
 
-# for index, fruit in enumerate(fruits, start=3):
-#     print(index, fruit)
-
-
-# user_info = {
-#     "id" : 1,
-#     "name" : "David",
-#     "grade" : "Intermediate",
-#     "mantra": "Evolving!"
-# }
-
-# user2 = ['blessing', 23, 'Female', 'Accounting']
-# user2.append('OAU')
-# print(user2)
-
-# #
-# user_info['Gender'] = 'Male'
-# print(user_info.keys())
-
-
-# value = 5/0
-# try:
-#     value
-# except ZeroDivisionError as e:
-#     print(e)
-
-num = ['a', 'b', 'c']
-
-
-for i in range(len(num)):
-    print("helllo")
+print(len(user_info))

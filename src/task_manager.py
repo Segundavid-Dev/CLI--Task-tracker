@@ -12,42 +12,34 @@ task5 = 'Delete-all'
 # validate user action
 list_tasks = [task1, task2, task3, task4, task5]
 dict_tasks = {}
+more_dict_tasks = {}
 
 def add_task():
     if current_action == task1:
         print("Executing add Task functionality...")
         time.sleep(1)
+        # Adding initial task
         add_task1 = input("Input your task: ")
 
-        dict_tasks[i] = add_task1
+        dict_tasks[0] = add_task1
         print(dict_tasks)
         time.sleep(0.5)
 
         print("Task added successfully...")
         time.sleep(0.5)
 
-    verify_adding_tasks = input("Do you want to add more Tasks ?:: ")
-    try:
-        if verify_adding_tasks.lower() == 'yes':
-            amount_of_tasks = int(input("Enter amount of tasks to add in Integer:: "))
+        counter = len(dict_tasks) #starts from the current length of the task dictionary
+        verifying_adding_tasks = input("Do you want to add more task? (Y for yes, N for no): ")
 
-            for i in range(amount_of_tasks):
-                more_tasks = input("Enter tasks:: ")
-                dict_tasks[i] = more_tasks
-                print(dict_tasks)
+        if verifying_adding_tasks.upper() == 'Y':
+            amount_of_task = int(input("Enter number of task to be added: "))
 
+            for _ in range(amount_of_task):
+                more_task_input = input("Enter more task: ")
+                dict_tasks[counter] = more_task_input
+                counter += 1
 
-
-            # print(f"\nSystem ready to add {amount_of_tasks} TO-DO's")
-    except ValueError as e:
-        print(e)
- 
-        # return add_task1
-    
-        
-    
-
-
+        print("Updated tasks", dict_tasks)
 
 
 def invalid_action():
@@ -57,7 +49,6 @@ def invalid_action():
         
        
         
-
 
 add_task1 = add_task()
 invalid_action()
