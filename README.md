@@ -1,14 +1,9 @@
 ## Requirements
 * The application should run from the command line, accept user actions and inputs as arguments, and store the tasks in a JSON file. The user should be able to:
 
-* Add, Update, and Delete tasks
-* Mark a task as in progress or done
+* Add tasks
 * List all tasks
-* List all tasks that are done
-* List all tasks that are not done
-* List all tasks that are in progress
-* Here are some constraints to guide the implementation:
-
+* Add More Tasks
 
 ### constraints
 * You can use any programming language to build this project.
@@ -18,35 +13,3 @@
 * Use the native file system module of your programming language to interact with the JSON file.
 * Do not use any external libraries or frameworks to build this project.
 * Ensure to handle errors and edge cases gracefully.
-
-
-### Task Properties
-* Each task should have the following properties:
-1) id: A unique identifier for the task
-2) description: A short description of the task
-3) status: The status of the task (todo, in-progress, done)
-4) createdAt: The date and time when the task was created
-5) updatedAt: The date and time when the task was last updated
-6) Make sure to add these properties to the JSON file when adding a new task and update them when updating a task.
-
-
-
-#### Adding a new task
-task-cli add "Buy groceries"
-##### Output: Task added successfully (ID: 1)
-
-#### Updating and deleting tasks
-task-cli update 1 "Buy groceries and cook dinner"
-task-cli delete 1
-
-#### Marking a task as in progress or done
-task-cli mark-in-progress 1
-task-cli mark-done 1
-
-#### Listing all tasks
-task-cli list
-
-####  Listing tasks by status
-task-cli list done
-task-cli list todo
-task-cli list in-progress

@@ -12,7 +12,6 @@ task5 = 'Delete-all'
 # validate user action
 list_tasks = [task1, task2, task3, task4, task5]
 dict_tasks = {}
-more_dict_tasks = {}
 
 def add_task():
     if current_action == task1:
@@ -22,7 +21,7 @@ def add_task():
         add_task1 = input("Input your task: ")
 
         dict_tasks[0] = add_task1
-        print(dict_tasks)
+        print("Task Added:: ", dict_tasks)
         time.sleep(0.5)
 
         print("Task added successfully...")
@@ -39,7 +38,18 @@ def add_task():
                 dict_tasks[counter] = more_task_input
                 counter += 1
 
-        print("Updated tasks", dict_tasks)
+            print("Updated tasks:: ", dict_tasks)
+
+        elif verifying_adding_tasks.upper() == 'N':
+            print(f"TO-DO's :: {dict_tasks}")
+    
+        else:
+            print("Invalid option!")
+
+def list_progress():
+    for task_in_progress in dict_tasks:
+        print(task_in_progress, "(In-Progress)")
+            
 
 
 def invalid_action():
