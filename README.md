@@ -13,3 +13,7 @@
 * Use the native file system module of your programming language to interact with the JSON file.
 * Do not use any external libraries or frameworks to build this project.
 * Ensure to handle errors and edge cases gracefully.
+
+
+## License
+This project is licensed under the MIT License - see the [MIT LICENSE](./LICENSE) file for details.
